@@ -18,7 +18,6 @@ public class JwtResponse {
     private List<String> roles;
 
     public JwtResponse(String jwt, String username, String password, List<String> roles) {
-
         this.token = jwt;
         this.username = username;
         this.password = password;

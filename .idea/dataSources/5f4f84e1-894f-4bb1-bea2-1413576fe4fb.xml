@@ -1388,8 +1388,8 @@ false posix/WET
 false posix/Zulu
 false posixrules
 </TimeZones>
-      <IntrospectionStateNumber>893</IntrospectionStateNumber>
-      <StartupTime>1636483008</StartupTime>
+      <IntrospectionStateNumber>900</IntrospectionStateNumber>
+      <StartupTime>1636487412</StartupTime>
     </root>
     <database id="2" parent="1" name="admin">
       <ObjectId>16384</ObjectId>
@@ -1408,7 +1408,7 @@ false posixrules
 13391||-9223372036854775808|U|G
 13391||10|U|G</Grants>
       <Owner>admin</Owner>
-      <IntrospectionStateNumber>894</IntrospectionStateNumber>
+      <IntrospectionStateNumber>901</IntrospectionStateNumber>
       <Current>1</Current>
       <Relations>sequence|table|24604|24605|1
 </Relations>
@@ -1507,7 +1507,7 @@ false posixrules
       <Comment>standard public schema</Comment>
       <StateNumber>527</StateNumber>
       <Owner>admin</Owner>
-      <IntrospectionStateNumber>894</IntrospectionStateNumber>
+      <IntrospectionStateNumber>901</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <extension id="24" parent="3" name="plpgsql">
@@ -1652,13 +1652,7 @@ false posixrules
       <StateNumber>869</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="43" parent="38" name="role">
-      <Position>3</Position>
-      <DataType>varchar(20)|0s</DataType>
-      <StateNumber>883</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <index id="44" parent="38" name="roles_pk">
+    <index id="43" parent="38" name="roles_pk">
       <ObjectId>24609</ObjectId>
       <StateNumber>869</StateNumber>
       <ColNames>id</ColNames>
@@ -1668,28 +1662,28 @@ false posixrules
       <ClassIds>1978</ClassIds>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="45" parent="38" name="roles_pk">
+    <key id="44" parent="38" name="roles_pk">
       <ObjectId>24610</ObjectId>
       <StateNumber>869</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>roles_pk</UnderlyingIndexName>
     </key>
-    <column id="46" parent="39" name="user_id">
+    <column id="45" parent="39" name="user_id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>876</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="47" parent="39" name="role_id">
+    <column id="46" parent="39" name="role_id">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>876</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="48" parent="39" name="user_roles_pk">
+    <index id="47" parent="39" name="user_roles_pk">
       <ObjectId>24614</ObjectId>
       <StateNumber>876</StateNumber>
       <ColNames>user_id
@@ -1699,14 +1693,14 @@ role_id</ColNames>
       <ClassIds>3124,1978</ClassIds>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="49" parent="39" name="user_roles_pk">
+    <key id="48" parent="39" name="user_roles_pk">
       <ObjectId>24615</ObjectId>
       <StateNumber>876</StateNumber>
       <ColNames>user_id
 role_id</ColNames>
       <UnderlyingIndexName>user_roles_pk</UnderlyingIndexName>
     </key>
-    <foreign-key id="50" parent="39" name="fkhfh9dx7w3ubf1co1vdev94g3f">
+    <foreign-key id="49" parent="39" name="fkhfh9dx7w3ubf1co1vdev94g3f">
       <ObjectId>24625</ObjectId>
       <StateNumber>889</StateNumber>
       <ColNames>user_id</ColNames>
@@ -1716,7 +1710,7 @@ role_id</ColNames>
       <RefKeyName>users_pk</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="51" parent="39" name="fkh8ciramu9cc9q3qcqiv4ue8a6">
+    <foreign-key id="50" parent="39" name="fkh8ciramu9cc9q3qcqiv4ue8a6">
       <ObjectId>24620</ObjectId>
       <StateNumber>888</StateNumber>
       <ColNames>role_id</ColNames>
@@ -1726,32 +1720,32 @@ role_id</ColNames>
       <RefKeyName>roles_pk</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="52" parent="40" name="id">
+    <column id="51" parent="40" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>863</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="53" parent="40" name="email">
+    <column id="52" parent="40" name="email">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>863</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="54" parent="40" name="password">
+    <column id="53" parent="40" name="password">
       <Position>3</Position>
       <DataType>varchar(1024)|0s</DataType>
       <StateNumber>863</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="55" parent="40" name="username">
+    <column id="54" parent="40" name="username">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>863</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="56" parent="40" name="users_pk">
+    <index id="55" parent="40" name="users_pk">
       <ObjectId>24600</ObjectId>
       <StateNumber>863</StateNumber>
       <ColNames>id</ColNames>
@@ -1761,7 +1755,7 @@ role_id</ColNames>
       <ClassIds>3124</ClassIds>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="57" parent="40" name="uk6dotkott2kjsp8vw4d0m25fb7">
+    <index id="56" parent="40" name="uk6dotkott2kjsp8vw4d0m25fb7">
       <ObjectId>24618</ObjectId>
       <StateNumber>887</StateNumber>
       <ColNames>email</ColNames>
@@ -1771,7 +1765,7 @@ role_id</ColNames>
       <ClassIds>3126</ClassIds>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="58" parent="40" name="users_email_uindex">
+    <index id="57" parent="40" name="users_email_uindex">
       <ObjectId>24602</ObjectId>
       <StateNumber>864</StateNumber>
       <ColNames>email</ColNames>
@@ -1781,7 +1775,7 @@ role_id</ColNames>
       <ClassIds>3126</ClassIds>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="59" parent="40" name="ukr43af9ap4edm43mmtq01oddj6">
+    <index id="58" parent="40" name="ukr43af9ap4edm43mmtq01oddj6">
       <ObjectId>24616</ObjectId>
       <StateNumber>885</StateNumber>
       <ColNames>username</ColNames>
@@ -1791,7 +1785,7 @@ role_id</ColNames>
       <ClassIds>3126</ClassIds>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="60" parent="40" name="users_username_uindex">
+    <index id="59" parent="40" name="users_username_uindex">
       <ObjectId>24603</ObjectId>
       <StateNumber>865</StateNumber>
       <ColNames>username</ColNames>
@@ -1801,20 +1795,20 @@ role_id</ColNames>
       <ClassIds>3126</ClassIds>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="61" parent="40" name="users_pk">
+    <key id="60" parent="40" name="users_pk">
       <ObjectId>24601</ObjectId>
       <StateNumber>863</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>users_pk</UnderlyingIndexName>
     </key>
-    <key id="62" parent="40" name="uk6dotkott2kjsp8vw4d0m25fb7">
+    <key id="61" parent="40" name="uk6dotkott2kjsp8vw4d0m25fb7">
       <ObjectId>24619</ObjectId>
       <StateNumber>887</StateNumber>
       <ColNames>email</ColNames>
       <UnderlyingIndexName>uk6dotkott2kjsp8vw4d0m25fb7</UnderlyingIndexName>
     </key>
-    <key id="63" parent="40" name="ukr43af9ap4edm43mmtq01oddj6">
+    <key id="62" parent="40" name="ukr43af9ap4edm43mmtq01oddj6">
       <ObjectId>24617</ObjectId>
       <StateNumber>885</StateNumber>
       <ColNames>username</ColNames>
