@@ -1,6 +1,5 @@
 package at.flo.springauth.domain;
 
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import lombok.Getter;
 
 import javax.persistence.*;

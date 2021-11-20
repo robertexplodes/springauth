@@ -1,4 +1,4 @@
-package at.flo.springauth.domain;
+package at.flo.springauth.payload.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

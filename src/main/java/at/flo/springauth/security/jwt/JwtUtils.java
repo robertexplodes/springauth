@@ -1,5 +1,6 @@
-package at.flo.springauth.security;
+package at.flo.springauth.security.jwt;
 
+import at.flo.springauth.security.services.UserDetailsImpl;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;

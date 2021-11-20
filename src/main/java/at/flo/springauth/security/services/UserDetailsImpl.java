@@ -1,13 +1,16 @@
-package at.flo.springauth.security;
+package at.flo.springauth.security.services;
 
+import at.flo.springauth.domain.Order;
 import at.flo.springauth.domain.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.Getter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 import java.util.Objects;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class UserDetailsImpl implements UserDetails {
@@ -18,17 +21,21 @@ public class UserDetailsImpl implements UserDetails {
 
     private String email;
 
+    private Collection<Order> orders;
+
     @JsonIgnore
     private String password;
 
+
     private Collection<? extends GrantedAuthority> authorities;
 
-    public UserDetailsImpl(Long id, String username, String email, String password, Collection<? extends GrantedAuthority> authorities) {
+    public UserDetailsImpl(Long id, String username, String email, String password, Collection<? extends GrantedAuthority> authorities, Collection<Order> orders) {
         this.id = id;
         this.username = username;
         this.email = email;
         this.password = password;
         this.authorities = authorities;
+        this.orders = orders;
     }
 
     public static UserDetailsImpl build(User user) {
@@ -40,7 +47,12 @@ public class UserDetailsImpl implements UserDetails {
                 user.getUsername(),
                 user.getEmail(),
                 user.getPassword(),
-                authorities);
+                authorities,
+                user.getOrders());
+    }
+
+    public Collection<Order> getOrders() {
+        return orders;
     }
 
     public Long getId() {

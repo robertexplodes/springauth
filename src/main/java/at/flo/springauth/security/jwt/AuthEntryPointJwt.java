@@ -1,4 +1,4 @@
-package at.flo.springauth.security;
+package at.flo.springauth.security.jwt;
 
 import java.io.IOException;
 
