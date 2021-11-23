@@ -3,6 +3,7 @@ package at.flo.springauth.security.services;
 import at.flo.springauth.domain.User;
 import at.flo.springauth.repository.UserRepository;
 import at.flo.springauth.security.services.UserDetailsImpl;
+import lombok.experimental.Delegate;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -12,7 +13,7 @@ import javax.transaction.Transactional;
 
 @Service("userService")
 public class UserDetailsServiceImpl implements UserDetailsService {
-
+    @Delegate
     private final UserRepository userRepository;
 
     public UserDetailsServiceImpl(UserRepository userRepository) {

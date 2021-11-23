@@ -6,6 +6,7 @@ import at.flo.springauth.payload.request.OrderRequest;
 import at.flo.springauth.repository.OrderRepository;
 import at.flo.springauth.repository.UserRepository;
 import at.flo.springauth.security.services.UserDetailsImpl;
+import at.flo.springauth.security.services.UserDetailsServiceImpl;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
@@ -20,8 +21,9 @@ import java.util.List;
 public class DataController {
 
     private final OrderRepository orderRepository;
+    private final UserDetailsServiceImpl userRepository;
 
-    public DataController(OrderRepository orderRepository, UserRepository userRepository) {
+    public DataController(OrderRepository orderRepository, UserDetailsServiceImpl userRepository) {
         this.orderRepository = orderRepository;
         this.userRepository = userRepository;
     }
@@ -57,7 +59,7 @@ public class DataController {
         return "Order for user " + orders.size();
     }
 
-    private final UserRepository userRepository;
+
 
     @PostMapping("/placeorder")
     @PreAuthorize("hasRole('ADMIN')")
