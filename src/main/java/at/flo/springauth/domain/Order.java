@@ -2,16 +2,19 @@ package at.flo.springauth.domain;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
 import javax.transaction.Transactional;
+import java.util.Objects;
 
 @Entity
 @Table(name = "orders")
 @Transactional
-@Data
+@Getter
+@Setter
 @ToString(exclude = {"user"})
 public class Order {
 
@@ -38,4 +41,16 @@ public class Order {
 
     public Order() {}
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Order order = (Order) o;
+        return Objects.equals(id, order.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
 }

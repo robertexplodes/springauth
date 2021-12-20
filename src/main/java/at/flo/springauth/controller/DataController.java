@@ -2,9 +2,7 @@ package at.flo.springauth.controller;
 
 
 import at.flo.springauth.domain.Order;
-import at.flo.springauth.domain.User;
 import at.flo.springauth.payload.request.OrderRequest;
-import at.flo.springauth.payload.update.UserCredentials;
 import at.flo.springauth.repository.OrderRepository;
 import at.flo.springauth.repository.UserRepository;
 import at.flo.springauth.security.services.UserDetailsImpl;
@@ -22,7 +20,6 @@ import java.util.List;
 public class DataController {
 
     private final OrderRepository orderRepository;
-    private final UserRepository userRepository;
 
     public DataController(OrderRepository orderRepository, UserRepository userRepository) {
         this.orderRepository = orderRepository;
@@ -60,9 +57,10 @@ public class DataController {
         return "Order for user " + orders.size();
     }
 
+    private final UserRepository userRepository;
 
     @PostMapping("/placeorder")
-    @PreAuthorize("hasRole('ADMIN') or hasRole('USER')")
+    @PreAuthorize("hasRole('ADMIN')")
     public String postOrder(@RequestBody OrderRequest orderRequest) {
         var user = (UserDetailsImpl) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         var order = new Order(orderRequest.getName(), orderRequest.getAmount());
@@ -72,6 +70,7 @@ public class DataController {
             var userInDatabase = optionalUserInDatabase.get();
             userInDatabase.addOrder(order);
             orderRepository.save(order);
+//            userRepository.save(userInDatabase);
             return "Order placed";
         } else
             return "User not found";
@@ -82,15 +81,5 @@ public class DataController {
     public List<Order> getOrdersForUser() {
         var principal = (UserDetailsImpl) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         return new ArrayList<>(principal.getOrders());
-    }
-
-    @PostMapping("/change")
-    @PreAuthorize("hasRole('USER')")
-    public void updateUser(@RequestBody UserCredentials newUser) {
-        var user = (UserDetailsImpl) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        update(new User(user.getId(), newUser.getUsername(), newUser.getEmail()));
-    }
-    private void update(User user) {
-        userRepository.update(user.getId(), user.getEmail(), user.getUsername());
     }
 }
