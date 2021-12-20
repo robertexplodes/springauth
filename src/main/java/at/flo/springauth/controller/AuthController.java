@@ -16,11 +16,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.HashSet;
@@ -51,11 +47,10 @@ public class AuthController {
         this.jwtUtils = jwtUtils;
     }
 
-    @PostMapping("/signin")
+    @PostMapping("/login")
     public ResponseEntity<JwtResponse> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
         Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(loginRequest.getUsername(), loginRequest.getPassword()));
-
         SecurityContextHolder.getContext().setAuthentication(authentication);
         String jwt = jwtUtils.generateJwtToken(authentication);
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
@@ -66,6 +61,14 @@ public class AuthController {
                 userDetails.getUsername(),
                 userDetails.getEmail(),
                 roles, userDetails.getOrders()));
+    }
+
+    @GetMapping("/credentials")
+    public ResponseEntity<User> getUser(@Valid @RequestHeader("Authorization") String token) {
+        token = token.substring(7);
+        String username = jwtUtils.getUserNameFromJwtToken(token);
+        var user = userRepository.findByUsername(username);
+        return ResponseEntity.ok(user.orElseThrow(() -> new RuntimeException("User not found")));
     }
 
     @PostMapping("/signup")
