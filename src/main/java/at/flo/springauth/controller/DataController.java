@@ -7,6 +7,8 @@ import at.flo.springauth.repository.OrderRepository;
 import at.flo.springauth.repository.UserRepository;
 import at.flo.springauth.security.services.UserDetailsImpl;
 import at.flo.springauth.security.services.UserDetailsServiceImpl;
+import ch.qos.logback.classic.BasicConfigurator;
+import org.slf4j.LoggerFactory;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
@@ -37,6 +39,14 @@ public class DataController {
     @PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
     public String userAccess() {
         return "User Content.";
+    }
+
+
+    @PostMapping("/test")
+    public String postMe(@RequestBody String request) {
+        var logger = LoggerFactory.getLogger(DataController.class);
+        logger.info(request);
+        return "hello world";
     }
 
     @GetMapping("/mod")

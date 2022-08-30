@@ -18,6 +18,8 @@ target/
 *.iws
 *.iml
 *.ipr
+/target
+/out
 
 ### NetBeans ###
 /nbproject/private/
