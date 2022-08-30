@@ -9,54 +9,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a7169ed-4cc3-4c02-8459-915255fcef98" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/flo/springauth/domain/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/flo/springauth/payload/request/OrderRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/flo/springauth/repository/OrderRepository.java" afterDir="false" />
+    <list default="true" id="0a7169ed-4cc3-4c02-8459-915255fcef98" name="Changes" comment="init">
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/flo/springauth/payload/update/UserCredentials.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/5f4f84e1-894f-4bb1-bea2-1413576fe4fb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5f4f84e1-894f-4bb1-bea2-1413576fe4fb.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/5f4f84e1-894f-4bb1-bea2-1413576fe4fb/storage_v2/_src_/database/auth.qN0tAA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5f4f84e1-894f-4bb1-bea2-1413576fe4fb/storage_v2/_src_/database/auth.qN0tAA/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springauth.iml" beforeDir="false" afterPath="$PROJECT_DIR$/springauth.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/flo/springauth/SpringauthApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/flo/springauth/SpringauthApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/at/flo/springauth/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/flo/springauth/controller/AuthController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/at/flo/springauth/controller/DataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/flo/springauth/controller/DataController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/flo/springauth/domain/JwtResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/flo/springauth/payload/response/JwtResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/flo/springauth/domain/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/flo/springauth/payload/request/LoginRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/flo/springauth/domain/MessageResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/flo/springauth/payload/response/MessageResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/flo/springauth/domain/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/flo/springauth/domain/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/flo/springauth/domain/Roles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/flo/springauth/domain/Roles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/flo/springauth/domain/SignupRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/flo/springauth/payload/request/SignupRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/at/flo/springauth/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/flo/springauth/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/flo/springauth/persistence/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/flo/springauth/repository/RoleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/flo/springauth/persistence/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/flo/springauth/security/services/UserDetailsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/flo/springauth/persistence/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/flo/springauth/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/flo/springauth/security/AuthEntryPointJwt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/flo/springauth/security/jwt/AuthEntryPointJwt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/flo/springauth/security/AuthTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/flo/springauth/security/jwt/AuthTokenFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/flo/springauth/security/JwtUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/flo/springauth/security/jwt/JwtUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/flo/springauth/security/UserDetailsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/flo/springauth/security/services/UserDetailsImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/flo/springauth/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/flo/springauth/security/services/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/at/flo/springauth/SpringauthApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/flo/springauth/SpringauthApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/flo/springauth/payload/response/JwtResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/flo/springauth/payload/response/JwtResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/flo/springauth/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/flo/springauth/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/flo/springauth/security/services/UserDetailsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/flo/springauth/security/services/UserDetailsImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/at/flo/springauth/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/flo/springauth/controller/AuthController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/at/flo/springauth/controller/DataController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/flo/springauth/controller/DataController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/at/flo/springauth/domain/JwtResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/at/flo/springauth/domain/LoginRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/at/flo/springauth/domain/MessageResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/at/flo/springauth/domain/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/flo/springauth/domain/Role.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/at/flo/springauth/domain/Roles.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/flo/springauth/domain/Roles.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/at/flo/springauth/domain/SignupRequest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/at/flo/springauth/domain/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/flo/springauth/domain/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/at/flo/springauth/persistence/RoleRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/at/flo/springauth/persistence/UserDetailsServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/at/flo/springauth/persistence/UserRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/at/flo/springauth/security/AuthEntryPointJwt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/at/flo/springauth/security/AuthTokenFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/at/flo/springauth/security/JwtUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/at/flo/springauth/security/UserDetailsImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/at/flo/springauth/security/WebSecurityConfig.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,8 +35,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Kotlin Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -84,16 +52,19 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/java/at/flo/springauth/security/services/UserDetailsImpl.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/at/flo/springauth/controller/DataController.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/at/flo/springauth/controller/AuthController.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/at/flo/springauth/domain/User.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/at/flo/springauth/security/services/UserDetailsImpl.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/at/flo/springauth/security/jwt/AuthEntryPointJwt.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/at/flo/springauth/security/jwt/AuthTokenFilter.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/at/flo/springauth/security/jwt/JwtUtils.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/at/flo/springauth/controller/AuthController.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/at/flo/springauth/controller/DataController.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/at/flo/springauth/security/jwt/AuthTokenFilter.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="uda2b8mn" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -118,11 +89,13 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/DockerFile" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.43937576" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RunManager" selected="Spring Boot.SpringauthApplication">
     <configuration name="SpringauthApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -175,6 +148,16 @@
       <workItem from="1637331409392" duration="28000" />
       <workItem from="1637331467987" duration="104000" />
       <workItem from="1637418599191" duration="2219000" />
+      <workItem from="1637563803774" duration="1982000" />
+      <workItem from="1637745535963" duration="627000" />
+      <workItem from="1637916635251" duration="156000" />
+      <workItem from="1637916816340" duration="2247000" />
+      <workItem from="1638036411175" duration="5598000" />
+      <workItem from="1638168216386" duration="3824000" />
+      <workItem from="1639561907154" duration="1303000" />
+      <workItem from="1639725484356" duration="1262000" />
+      <workItem from="1639985476892" duration="3600000" />
+      <workItem from="1639992339717" duration="578000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1636485547097</created>
@@ -195,6 +178,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />

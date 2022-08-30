@@ -22,6 +22,12 @@ import java.util.*;
 @Transactional
 public class User {
 
+    public User(Long id, String username, String email) {
+        this.id = id;
+        this.username = username;
+        this.email = email;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
